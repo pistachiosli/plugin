@@ -1,0 +1,67 @@
+.nd-plugin-msgbox {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: fixed;
+  z-index: 2147483647;
+  transition: display 3s ease;
+}
+.nd-plugin-msgbox .nd-plugin-msgbox-mb {
+  width: 100%;
+  height: 100%;
+  opacity: 0.4;
+  background: #000;
+}
+.nd-plugin-msgbox .nd-plugin-msgbox-box {
+  position: absolute;
+  width: 80%;
+  left: 50%;
+  top: 50%;
+  max-width: 500px;
+  background: #f0f0f0;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  box-shadow: 1px 1px 1px #999;
+  text-align: center;
+  transform: translate(-50%, -50%);
+}
+.nd-plugin-msgbox .nd-plugin-msgbox-box .nd-plugin-msgbox-title {
+  color: #232323;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0 20px;
+  margin-top: 25px;
+  font-size: 20px;
+  font-weight: bold;
+  overflow: hidden;
+}
+.nd-plugin-msgbox .nd-plugin-msgbox-box .nd-plugin-msgbox-content {
+  color: #515151;
+  font-size: 16px;
+  padding: 15px 15px 25px;
+}
+.nd-plugin-msgbox .nd-plugin-msgbox-box .nd-plugin-msgbox-btnct {
+  width: 100%;
+  box-sizing: border-box;
+  border-top: 2px solid #cdcdcd;
+  padding: 0;
+}
+.nd-plugin-msgbox .nd-plugin-msgbox-box .nd-plugin-msgbox-btnct .nd-plugin-msgbox-btn {
+  width: auto;
+  padding: 10px;
+  font-size: 16px;
+  padding: 15px;
+  display: inline-block;
+  text-align: center;
+  box-sizing: border-box;
+  color: #2c82fa;
+  font-weight: bold;
+  font-size: 18px;
+  float: left;
+  border-right: 1px solid #b4b4b4;
+  text-decoration: none;
+}
+.nd-plugin-msgbox .nd-plugin-msgbox-box .nd-plugin-msgbox-btnct .nd-plugin-msgbox-btn:last-child {
+  border-right: 0;
+}

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0, user-scalable=no">
+	<title>带颜色的消息框</title>
+	<link rel="stylesheet" type="text/css" href="css/index4.css">
+	<script type="text/javascript" src="js/nodom-full.js"></script>
+	<style type="text/css">
+		.com-alert{
+			width: 100px;
+			height: 100px;
+			background-color: #000;
+			line-height: 4rem;
+			text-align: center;
+			border-radius: .2rem;
+			background-color: #ccc;
+			color: #fff;
+			position: fixed;
+			left: 6rem;
+			bottom: 5rem;
+			z-index: 99999;
+			-webkit-animation: disappear 2s;
+}
+@-webkit-keyframes disappear{
+  0% {
+    z-index: 999;
+  }
+  100%{
+    z-index:-99;
+  }
+}
+	</style>
+</head>
+<body>
+	<div class="app">
+		<div e-click="show">111</div>
+		<!-- <div class="com-pop-up" x-if="show_pop_up">
+			<div class="com-pop-up-box">
+				<div class="com-pop-up-content">确定删除订单吗?</div>
+				<div class="com-pop-up-no" e-click="chooseNo">取消</div>
+				<div class="com-pop-up-yes" e-click="chooseYes">确认</div>
+			</div>
+		</div> -->
+		<div class="com-alert" >
+			<div>{{ alertContent }}</div>
+		</div>
+	</div>
+</body>
+<script type="text/javascript">
+	DD.createModule({
+		el:'.app',
+		data:{
+			delete:true,
+			show_pop_up:false,
+			alertContent:'hhh'
+		},
+		methods:{
+			chooseYes:function(e,data,view){
+				this.data.show_pop_up = false;
+				this.delete = true;
+			},
+			chooseNo:function(e,data,view){
+				this.data.show_pop_up = false;
+			}
+		}
+	})
+</script>
+</html>

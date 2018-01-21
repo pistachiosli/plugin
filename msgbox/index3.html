@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<link rel="stylesheet" type="text/css" href="css/index.css">
+	<script type="text/javascript" src="js/nodom-full.js
+	"></script>
+<body>
+	<div class='code1'>
+	    这是父模块
+		<div x-plugin='msgbox' x-model='msgdata' showItem='msgshow'></div>
+		<div class='code2' >
+			这是子模块1
+	        <button e-click='showbox'>show</button>
+	    </div>
+	    <div class='result code3' >
+	        这是子模块2
+			<button e-click='showbox'>show</button>
+		</div>
+	</div>
+</body>
+<script type="text/javascript" src="js/index3.js"></script>
+</html>

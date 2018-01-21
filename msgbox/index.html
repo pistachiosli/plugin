@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta content=”width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;” name=”viewport” /> 
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="css/index.css">
+	<script type="text/javascript" src="js/nodom-full.js
+	"></script>
+	<script type="text/javascript" src="js/msgbox.js"></script>
+</head>
+<body>
+	<div class="app">
+		<div class='code2'>
+			<div x-plugin='msgbox' showItem='aaa'>
+			</div>
+			<button e-click='showbox'>show</button>
+		</div>
+	</div>
+</body>
+<script type="text/javascript">
+	DD.createModule({
+		name: 'code1',
+		el: '.app',
+		modules: [{
+			name: 'code2',
+			el: '.code2',
+			data: {
+				title: '确定',
+				content: '点击确定按钮关闭消息框',
+				aaa: false,
+				module: this.module,
+				buttons: [{
+					text: '确定'
+				}]
+			},
+			methods: {
+				//按钮click事件
+				showbox: function() {
+					this.data.aaa = true;
+				},
+				change: function() {
+
+				}
+			},
+		}]
+	});
+</script>
+</html>

@@ -1,0 +1,61 @@
+DD.createModule({
+	name:'pmod',
+	el:'.code1',
+	//这个为根模块
+	root:true,
+	data:{
+		//设置初始消息框数据
+		msgdata:{
+			buttons:[{text:'ok'}],
+			msgshow:false
+		}
+	},
+	onReceive:function(mn,data){
+		this.data.$set('msgdata',data);
+	},
+	modules:[{
+		el:'.code2',
+		methods:{
+			showbox:function(){
+				//发消息给root模块
+				this.module.send('pmod',{
+					title:'确定',
+					content:'点击确定按钮关闭消息框',
+					msgshow:true,
+					//向父模块发消息，需要设置模块
+					module:this.module,
+					buttons:[{text:'确定'}]
+				});
+			}
+		}
+	},{
+		el:'.code3',
+		methods:{
+			showbox:function(){
+				//发消息给root模块
+				this.module.send('pmod',{
+					title:'按钮选择',
+					content:'点击不同按钮显示不同提示',
+					buttons:[
+						{text:'确定'},
+						{text:'取消'},
+						{text:'忽略'}
+					],
+					callbacks:['ok','cancel','ignore'],
+					//向父模块发消息，需要设置模块
+					module:this.module,
+					msgshow:true
+				});
+			},
+			ok:function(){
+				alert('确定 is clicked');
+			},
+			cancel:function(){
+				alert('取消 is clicked');
+			},
+			ignore:function(){
+				alert('忽略 is clicked');
+			}
+		}
+	}]
+});

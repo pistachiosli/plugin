@@ -1,0 +1,39 @@
+.box{
+	width: 100%;
+	height: 200px;
+	margin: 0 auto;
+}
+.nd-plugin-carousel-box{
+	position: relative;
+	width: 20rem;
+	height: 200px;
+	overflow: hidden;
+	text-align: center;
+	// border: 2px solid #ff0000;
+}
+.nd-plugin-carousel-imgbox{
+	position: absolute;
+	top: 0px;
+	height: 100%;
+	font-size: 0;
+	transition: transform 1s ease;
+}
+.nd-plugin-carousel-img{
+	// box-sizing: border-box;
+	height: 100%;
+	margin: 0;
+	// border: 1px solid #000;
+}
+.nd-plugin-carousel-circle{
+	display: inline-block;
+	position: relative;
+	width: 5px;
+	height: 5px;
+	top: 170px;
+	margin-left: 20px;
+	border: 1px solid #000;
+	border-radius: 50%;
+}
+.ischecked{
+	background-color: #00c6ff;
+}
