@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="css/index.css">
+	<script type="text/javascript" src="js/nodom-full.js"></script>
+	<script type="text/javascript" src="js/paging.js"></script>
+</head>
+<body>
+	<div class="app">
+		<div>111</div>
+		<div x-plugin="paging"></div>
+	</div>
+</body>
+<script type="text/javascript">
+	DD.createModule({
+        el:'.app',
+        data:{
+            page:3,
+            row:10,
+            total:191,
+            to_page:1,
+            allpage:20
+        },
+        methods:{
+            updatePage:function(){
+                console.log('hhhh');
+            }
+        }
+    });
+</script>
+</html>
